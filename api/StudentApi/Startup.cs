@@ -31,7 +31,7 @@ namespace StudentApi
 
             services.AddCors(options => options.AddDefaultPolicy(builder =>
             {
-
+                builder.WithHeaders("content-type");
                 builder.WithOrigins("http://localhost:4200", "http://localhost:8100", "http://localhost");
             }));
 

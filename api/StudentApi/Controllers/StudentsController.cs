@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace StudentApi.Controllers
 {
@@ -38,6 +39,13 @@ namespace StudentApi.Controllers
             var reponse = await Mediator.Send(new GetStudentsRequest());
 
             return reponse.Students;
+        }
+
+        [HttpPost]
+        public async Task<bool> Post(Student newStudent)
+        {
+            var response = await Mediator.Send(new AddStudentRequest(newStudent));
+            return response.Success;
         }
     }
 }

@@ -1,0 +1,46 @@
+<p>Add a new student</p>
+<form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+  <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <label for="first-name">First Name: </label>
+        </div>
+        <div class="col-sm">
+          <input id="first-name" type="text" formControlName="firstName">
+        </div>
+      </div>  
+      <div class="row">
+        <div class="col-sm">
+          <label for="last-name">Last Name: </label>
+        </div>
+        <div class="col-sm">
+          <input id="last-name" type="text" formControlName="lastName">
+        </div>
+      </div>  
+      <div class="row">
+        <div class="col-sm">
+          <label for="email">Email: </label>
+        </div>
+        <div class="col-sm">
+          <input id="email" type="text" formControlName="email">
+        </div>
+      </div>  
+      <div class="row">
+        <div class="col-sm">
+          <label for="major">Major: </label>
+        </div>
+        <div class="col-sm">
+          <input id="major" type="text" formControlName="major">
+        </div>
+      </div>  
+      <div class="row">
+        <div class="col-sm">
+          <label for="average-grade">Average Grade: </label>
+        </div>
+        <div class="col-sm">
+          <input id="average-grade" type="text" formControlName="averageGrade">
+        </div>
+      </div>  
+      <button type="submit">Submit</button>
+  </div>
+</form>

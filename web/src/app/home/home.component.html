@@ -9,6 +9,7 @@
       <th>Lastname</th>
       <th>Email</th>
       <th>Major</th>
+      <th>Average Grade</th>
     </tr>
   </thead>
   <tbody>
@@ -17,6 +18,12 @@
       <td>{{ student.lastName }}</td>
       <td>{{ student.email }}</td>
       <td>{{ student.major }}</td>
+      <td [ngClass]="{
+        'high-grade': student.averageGrade >= 80,
+        'medium-grade': student.averageGrade >= 50 && student.averageGrade < 80,
+        'low-grade': student.averageGrade < 50
+      }">{{ student.averageGrade }}</td>
     </tr>
   </tbody>
+  <a [routerLink]="['/add']">Add</a>
 </table>
