@@ -19,7 +19,7 @@ Please enter/replace your details below.
 | - | - |
 | Name | Kevin Pluck |
 | Date | 2022-09-09 |
-| Start Time | 15:00+13:00 |
+| Start Time | 14:00+13:00 |
 | Finish Time | 17:20+13:00 |
 
 ## Requirements
